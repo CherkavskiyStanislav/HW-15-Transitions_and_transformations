@@ -254,13 +254,12 @@ a {
     .third-screen {
         background: linear-gradient(180deg, #A1C7D4 0%, #fff 100%);
         padding: 10px 8px 0;
-        height: 100vh;
         color: #0F2D4A; 
     }
 
     .third-screen h2 {
         text-align: center;
-        margin: 60px auto 20px;
+        margin: 10px auto 10px;
         font-size: 22px;
         line-height: 29px;
         font-weight: 700;
@@ -285,7 +284,7 @@ a {
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 10px;
+        gap: 5px;
 
     }
     .tooth_cards h3 {
@@ -309,7 +308,6 @@ a {
     }
     .form-screen {
         padding: 10px 8px 0;
-        height: 50vh;
     }
     .input_panel h3 {
         font-size: 22px;
@@ -319,7 +317,7 @@ a {
 
         text-align: center;
         text-transform: uppercase;
-        margin: 29px 0 0;
+        margin: 19px 0 0;
     }
     .input_panel h3 + p {
         font-size: 15px;
@@ -544,7 +542,7 @@ a {
     }
 
     .cards_one {
-        margin: 480px auto 0;
+        margin: 270px auto 0;
         display: flex;
         justify-content: space-around;
         position: relative;
