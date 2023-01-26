@@ -19,6 +19,25 @@ a {
     color: #000;
     text-decoration: none;
 }
+.header_navigation a:hover {
+    color: #46B1DE;
+}
+#phone:focus {
+    background-image: none;
+    border: 2px solid #46B1DE;
+}
+#name:focus {
+    background-image: none;
+    border: 2px solid #46B1DE;
+}
+.footer_navigation a:hover {
+    color: #fff;
+}
+.footer_navigation p:hover {
+    color: #fff;
+}
+
+
 
 
 /* MOBILE */
@@ -65,6 +84,7 @@ a {
         text-transform: none;
     }
     .header_tel a {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -75,10 +95,16 @@ a {
         font-weight: 400;
         line-height: 14px;
     }
-    .phoneimg {
-        height: 15px;
-        width: 15px;
-        padding-right: 3px;
+    .header_tel a::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/phone.svg');
+        background-repeat: no-repeat;
+        background-size: 12px;
+        top: 0;
+        left: -15px;
+        height: 18px;
+        width: 18px;
     }
 
     header h2 {
@@ -188,10 +214,23 @@ a {
         justify-content: space-between;
         flex-direction: column;
     }
-    .footer_navigation p {
-        margin: 0;
-        color: #000;
+    .footer_navigation > a {
+        color: #0F2D4A;
     }
+    .footer_lang a:first-child {
+        font-weight: 600;
+    }
+    .footer_lang a:last-child {
+        position: relative;
+        left: 7px;
+    }
+    .footer_lang a:last-child::before {
+        position: absolute;
+        content: "|";
+        top: -1px;
+        left: -7px;
+    }
+
     .footer_hours p {
         font-weight: 600;
     }
@@ -222,18 +261,53 @@ a {
         text-align: left;
         text-transform: uppercase;
     }
-    .footer_column__second a {
+
+    address > a {
+        position: relative;
         color: #FFF;
         padding-top: 13.04px;
         font-size: 17.1613px;
         line-height: 135%;
+        left: 30px;
+    }
 
+    .tell::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_phone.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        top: 13px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
     }
-    .footer_column__second img {
-        vertical-align: middle;
-        height: 24px;
-        margin-right: 13px;
+    .inst::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_instagram.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        top: 13px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
     }
+    .email::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_email.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        top: 13px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
+    }
+
     .copyright {
         font-size: 11px;
         line-height: 15px;
@@ -441,6 +515,7 @@ a {
         text-transform: none;
     }
     .header_tel a {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -450,6 +525,17 @@ a {
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
+    }
+    .header_tel a::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/phone.svg');
+        background-repeat: no-repeat;
+        background-size: 14px;
+        top: 0;
+        left: -20px;
+        height: 18px;
+        width: 18px;
     }
     .phoneimg {
         height: 15px;
@@ -706,9 +792,21 @@ a {
         justify-content: space-between;
         flex-direction: column;
     }
-    .footer_navigation p {
-        margin: 0;
-        color: #000;
+    .footer_navigation > a {
+        color: #0F2D4A;
+    }
+    .footer_lang a:first-child {
+        font-weight: 600;
+    }
+    .footer_lang a:last-child {
+        position: relative;
+        left: 7px;
+    }
+    .footer_lang a:last-child::before {
+        position: absolute;
+        content: "|";
+        top: -1px;
+        left: -7px;
     }
     .footer_hours p {
         font-weight: 600;
@@ -740,18 +838,53 @@ a {
         text-align: left;
         text-transform: uppercase;
     }
-    .footer_column__second a {
+
+    address > a {
+        position: relative;
         color: #FFF;
         padding-top: 13.04px;
         font-size: 17.1613px;
         line-height: 135%;
+        left: 30px;
+    }
 
+    .tell::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_phone.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        top: 13px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
     }
-    .footer_column__second img {
-        vertical-align: middle;
-        height: 24px;
-        margin-right: 13px;
+    .inst::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_instagram.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        top: 13px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
     }
+    .email::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_email.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+
+        top: 13px;
+        left: -30px;
+        width: 25px;
+        height: 25px;
+    }
+
     .copyright {
         font-size: 11px;
         line-height: 15px;
@@ -966,6 +1099,7 @@ a {
     }
 
     .header_tel a {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -973,8 +1107,16 @@ a {
         font-size: 16px;
         width: 174px;
         height: 24px;
+        left: 30px;
     }
-    .phoneimg {
+    .header_tel a::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/phone.svg');
+        background-repeat: no-repeat;
+        background-size: 18px;
+        top: 0;
+        left: -25px;
         height: 18px;
         width: 18px;
     }
@@ -985,8 +1127,18 @@ a {
         font-size: 20px;
         line-height: 23px;
     }
-    .language span {
+    .language a:first-child {
         font-weight: 600;
+    }
+    .language a:last-child {
+        position: relative;
+        left: 10px;
+    }
+    .language a:last-child::before {
+        position: absolute;
+        content: "|";
+        top: 0;
+        left: -10px;
     }
 
     header h2 {
@@ -1214,9 +1366,6 @@ a {
         line-height: 140%;
         color: rgba(27, 29, 31, 0.51);
     }
-    #name:focus {
-        background-image: none;
-    }
     #phone {
         width: 233px;
         height: 57px;
@@ -1232,9 +1381,6 @@ a {
         font-size: 19px;
         line-height: 140%;
         color: rgba(27, 29, 31, 0.51);
-    }
-    #phone:focus {
-        background-image: none;
     }
     button {
         width: 180px;
@@ -1314,16 +1460,24 @@ a {
         flex-direction: column;
         justify-content: space-between;
     }
-    .footer_navigation p {
-        margin: 0;
-        color: #000;
-    }
-    .footer_navigation p span {
-        font-weight: 600;
-    }
-    .footer_navigation a {
+
+    .footer_navigation > a {
         color: #0F2D4A;
     }
+    .footer_lang a:first-child {
+        font-weight: 600;
+    }
+    .footer_lang a:last-child {
+        position: relative;
+        left: 10px;
+    }
+    .footer_lang a:last-child::before {
+        position: absolute;
+        content: "|";
+        top: -3px;
+        left: -10px;
+    }
+
     .footer_hours p {
         margin: 67px 0 0;
         font-weight: 600;
@@ -1349,25 +1503,77 @@ a {
         display: flex;
         flex-direction: column;
     }
-    address a {
-        color: #fff;
-    }
     address p {
         margin: 0 0 15px;
     }
     address p + p {
         margin: 0 0 20px;
     }
-    address img {
-        vertical-align: middle;
-        height: 28px;
-        margin-right: 15px;
+
+    address > a {
+        position: relative;
+        color: #fff;
+        left: 40px;
     }
-    .social_media {
-        margin: 9px 0 15px;
+    address > a:hover::after {
+        position: absolute;
+        content: "_____________________";
+        top: 8px;
+        left: 0px;
     }
     .inst {
         padding-bottom: 18px;
+    }
+    .inst:hover::after {
+        position: absolute;
+        content: "__________";
+        top: 8px;
+        left: 0px; 
+    }
+
+    .tell::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_phone.svg');
+        background-repeat: no-repeat;
+        background-size: 28px;
+
+        top: 0;
+        left: -40px;
+        width: 30px;
+        height: 30px;
+    }
+    .inst::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_instagram.svg');
+        background-repeat: no-repeat;
+        background-size: 28px;
+
+        top: 0;
+        left: -40px;
+        width: 30px;
+        height: 30px;
+    }
+    .email::before {
+        position: absolute;
+        content: "";
+        background-image: url('/img/figma_imge/footer_email.svg');
+        background-repeat: no-repeat;
+        background-size: 28px;
+
+        top: 0;
+        left: -40px;
+        width: 30px;
+        height: 30px;
+    }
+    .social_media {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        gap: 22px;
+        margin-top: 9px;
     }
     .copyright {
         padding-top: 12px;
