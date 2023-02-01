@@ -88,8 +88,7 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        width: 127px;
+        right: 5px;
 
         font-size: 12px;
         font-weight: 400;
@@ -472,9 +471,61 @@ a {
         max-width: 220px;
         border-radius: 8px;
     }
-
 }
+/* BURGER MENU */
 
+@media screen and (max-width: 768px){
+
+    .burger {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        left: 90%;
+        top: 59px;
+        cursor: pointer;
+    }
+    .animation_menu {
+        display: block;
+        width: 15px;
+        height: 2px;
+        background-color: #000;
+    }
+    .burger::before {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 2px;
+        background-color: #000;
+        top: 4px;
+    }
+    .burger::after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 2px;
+        background-color: #000;
+        bottom: 4px;
+    }
+
+    .burger:focus span{
+        width: 0;
+    }
+    .burger:focus::before {
+        background-color: #46B1DE;
+        transform: rotate(45deg);
+        top: 9px;
+        transition: all .3s linear;
+    }
+    .burger:focus::after {
+        bottom: 9px;
+        background-color: #46B1DE;
+        transform: rotate(-45deg);
+        transition: all .3s linear;
+    }
+}
 
 /* TABLET */
 
@@ -519,12 +570,11 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        width: 127px;
 
         font-size: 12px;
         font-weight: 400;
         line-height: 14px;
+        right: 30px;
     }
     .header_tel a::before {
         position: absolute;
@@ -537,17 +587,11 @@ a {
         height: 18px;
         width: 18px;
     }
-    .phoneimg {
-        height: 15px;
-        width: 15px;
-        padding-right: 3px;
-    }
-
     .language {
         display: none;
     }
     nav {
-        width: 280px;
+        width: 200px;
         height: 19px;
         font-size: 12px;
         line-height: 19px;
@@ -1141,6 +1185,22 @@ a {
         left: -10px;
     }
 
+    .animation {
+
+        animation-name: first-screenAnimation;
+        animation-duration: 1s;
+    }
+
+    @keyframes first-screenAnimation {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     header h2 {
         white-space: pre-line;
         margin: 30px 0 0;
@@ -1208,6 +1268,22 @@ a {
         position: relative;
         display: flex;
         justify-content: space-around;
+        animation-name: cardsAnimation;
+        animation-duration: 2s;
+    }
+
+    @keyframes cardsAnimation {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
     
     .cards_style{
@@ -1629,6 +1705,17 @@ a {
         font-weight: 400;
         font-size: 18px;
         line-height: 140%;
+
+        animation-name: cirleAnimation;
+        animation-duration: 1s;
+        animation-delay: 3s;
+    }
+
+    @keyframes cirleAnimation {
+        0% {
+            top: 50%;
+            left: 50%;
+        }
     }
 
     .tooth_row {
@@ -1660,6 +1747,30 @@ a {
     }
     .text_right {
         text-align: right;
+
+        animation-name: tooth_row_rightAnimation;
+        animation-duration: 1s;
+        animation-delay: 3s;
+    }
+
+    .text_left {
+        animation-name: tooth_row_leftnimation;
+        animation-duration: 1s;
+        animation-delay: 3s;
+    }
+
+    @keyframes tooth_row_rightAnimation {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    @keyframes tooth_row_leftnimation {
+        0% {
+            opacity: 0;
+            transform: translate(50%, -50%);
+        }
     }
 
     .attention_icon {
@@ -1672,5 +1783,8 @@ a {
         font-size: 20px;
         line-height: 140%;
         color: #46B1DE;
+    }
+    .burger {
+        display: none;
     }
 }
